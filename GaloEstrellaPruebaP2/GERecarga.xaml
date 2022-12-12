@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GaloEstrellaPruebaP2.GERecarga"
+             Title="GERecarga">
+    <VerticalStackLayout>
+        <Label 
+            Text="Galo Estrella "
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label FontSize="22" FontAttributes="Bold" Text="Ingrese su numero de celular aqui:" 
+               VerticalOptions="Center" HorizontalOptions="Center"/>
+        <VerticalStackLayout Spacing="10" Margin="5">
+            <Entry x:Name="E"
+                   Placeholder="Enter text"
+                  TextChanged="OnEntryTextChanged"
+                   Completed="OnEntryCompleted"/>
+
+        </VerticalStackLayout>
+        <Picker x:Name="SeleccioneOperador"
+        Title="Seleccione Operador ">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Claro</x:String>
+                    <x:String>Movistar</x:String>
+                    <x:String>Tuenti</x:String>
+                    <x:String>Maxiplus</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <VerticalStackLayout Spacing="10" >
+            <Label FontSize="12" FontAttributes="Bold" Text="Selccione el monto de la recarga:" 
+               VerticalOptions="Center" HorizontalOptions="Center"/>
+            <RadioButton  VerticalOptions="End" HorizontalOptions="Center" GroupName="gp1" Content="3"/>
+            <RadioButton  VerticalOptions="End" HorizontalOptions="Center" GroupName="gp1" Content="5"/>
+            <RadioButton  VerticalOptions="End" HorizontalOptions="Center" GroupName="gp1" Content="10"/>
+            <Button Text="Learn more.." Clicked="LearnMore_Clicked" />
+        
+        </VerticalStackLayout>
+        
+  
+
+    </VerticalStackLayout>
+ 
+</ContentPage>
+    
